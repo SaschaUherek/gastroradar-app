@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# lokale Konfig / temporär
+*.log
+
+# Sicherheit: falls später lokale Overrides entstehen
+config/local.json

@@ -1,0 +1,10 @@
+{
+  "product": "GastroRadar",
+  "city": "Leipzig",
+  "customer": "Sascha (Dev)",
+  "mode": "development",
+  "ads": {
+    "overlay_enabled": true,
+    "overlay_every_clicks": 5
+  }  
+}

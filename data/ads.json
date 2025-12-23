@@ -1,0 +1,27 @@
+{
+  "ads": [
+    {
+      "id": "shiftplanner",
+      "title": "Weniger Chaos im Service",
+      "text": "Digitaler Schichtplan für Gastro – 14 Tage gratis",
+      "url": "https://example.com/shiftplanner",
+      "image": "img/ads/demo-ad.jpg",
+      "active": true
+    },
+    {
+      "id": "drink-supplier",
+      "title": "Neue Drinks, bessere Marge",
+      "text": "Regionale Getränkelieferung für Bars & Cafés",
+      "url": "https://example.com/drinks",
+      "image": "img/ads/demo-ad.jpg",
+      "active": true
+    },
+    {
+      "id": "cleaning",
+      "title": "Sauber ohne Stress",
+      "text": "Reinigungsservice speziell für Gastronomie",
+      "url": "https://example.com/cleaning",
+      "active": true
+    }
+  ]
+}
