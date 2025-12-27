@@ -151,8 +151,8 @@ unset($dayData);
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>Wochenübersicht · Leipzig</title>
 
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="stylesheet" href="/assets/week.css">
+<link rel="stylesheet" href="/leipzig/assets/style.css">
+<link rel="stylesheet" href="/leipzig/assets/week.css">
 </head>
 <body>
 
@@ -161,7 +161,7 @@ unset($dayData);
 
     <div class="header-brand">
       <a href="index.php?week=<?= $weekOffset ?>" title="Zurück zum Kalender">
-        <img src="/img/gr-logo.png" alt="GastroRadar">
+        <img src="/leipzig/img/gr-logo.png" alt="GastroRadar">
       </a>
     </div>
 

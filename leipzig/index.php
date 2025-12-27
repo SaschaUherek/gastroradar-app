@@ -184,7 +184,7 @@ $manyEvents = $eventsThisWeek >= 4;
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>GastroRadar · Leipzig</title>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/leipzig/assets/style.css">
 </head>
 
 <body>
@@ -193,7 +193,7 @@ $manyEvents = $eventsThisWeek >= 4;
 
   <!-- LOGO / APP NAME -->
   <div class="header-brand">
-    <img src="/img/gr-logo.png" alt="GastroRadar">
+    <img src="/leipzig/img/gr-logo.png">
   </div>
 
   <!-- BADGES -->
@@ -287,7 +287,7 @@ while ($day <= $weekEnd):
       $img = null;
 
       if ($event['source'] === 'rb') {
-          $img = 'img/RBLogo.png';
+          $img = '/leipzig/img/RBLogo.png';
       } elseif (!empty($event['image'])) {
           $path = trim($event['image']);
           if (preg_match('#^https?://#i', $path)) {
@@ -358,7 +358,7 @@ endwhile;
 <script>
   window.GASTRO_OVERLAY_EVERY = 5; // später aus config/app.json
 </script>
-<script src="/assets/app.js"></script>
+<script src="/leipzig/assets/app.js"></script>
 
 <?php //include __DIR__ . '/partials/ad_overlay.php'; ?>
 </body>

@@ -91,7 +91,7 @@ if ($query !== '') {
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>Events durchsuchen · Leipzig</title>
 
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/leipzig/assets/style.css">
 </head>
 
 <body>
@@ -101,7 +101,7 @@ if ($query !== '') {
 
     <div class="header-brand">
       <a href="index.php?week=<?= $weekOffset ?>" title="Zurück zum Kalender">
-        <img src="/img/gr-logo.png" alt="GastroRadar">
+        <img src="/leipzig/img/gr-logo.png" alt="GastroRadar">
       </a>
     </div>
 
@@ -141,7 +141,7 @@ if ($query !== '') {
   $img = null;
 
   if ($event['source'] === 'rb') {
-      $img = 'img/RBLogo.png';
+      $img = '/leipzig/img/RBLogo.png';
   } elseif (!empty($event['image'])) {
       $path = trim($event['image']);
       if (preg_match('#^https?://#i', $path)) {
