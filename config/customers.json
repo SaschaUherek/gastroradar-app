@@ -1,0 +1,14 @@
+{
+  "sascha": {
+    "name": "GastroRadar Demo",
+    "password": "demo123",
+    "test": "Kunde: SASCHA",
+    "active": true
+  },
+  "kcp": {
+    "name": "KCP Pub",
+    "password": "kcp2025",
+    "test": "Kunde: KCP",
+    "active": true
+  }
+}

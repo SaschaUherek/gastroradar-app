@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/core/auth.php';
-gr_require_access('sascha');
 
 define('APP_BASE_PATH', '/');
 
