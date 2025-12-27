@@ -2,8 +2,18 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>GASTRO RADAR</title>
+  <title>GastroRadar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8TRHXYX3N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N8TRHXYX3N');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,23 +26,26 @@
   <main class="landing">
 
     <header class="landing-header">
-      <img src="img-landing/gr-logo.png" alt="GastroRadar" class="logo">
-      <p class="claim">Wissen, was in deiner Stadt los ist.</p>
+      <img src="img-landing/Gastroradar-LOGO-weiss.png" alt="GastroRadar" class="logo">
+      <p class="claim">
+        Wissen, was <strong>in deiner Stadt</strong> los ist.
+      </p>
     </header>
 
     <section class="city-grid">
 
       <!-- Leipzig (aktiv) -->
       <a href="/leipzig/" class="city-card active">
+        <span class="city-badge">Verfügbar</span>
+
         <img src="img-landing/leipzig.jpg" alt="Leipzig">
         <span class="city-name">Leipzig</span>
-        <span class="city-status">Jetzt verfügbar</span>
       </a>
 
-      <!-- München -->
+      <!-- Halle -->
       <div class="city-card disabled">
-        <img src="img-landing/muenchen.webp" alt="München">
-        <span class="city-name">München</span>
+        <img src="img-landing/halle.jpg" alt="Kiel">
+        <span class="city-name">Halle</span>
         <span class="city-status">Coming soon</span>
       </div>
 
@@ -43,18 +56,45 @@
         <span class="city-status">Coming soon</span>
       </div>
 
-      <!-- Kiel -->
+      <!-- Magdeburg -->
+      <div class="city-card disabled">
+        <img src="img-landing/magdeburg.jpg" alt="München">
+        <span class="city-name">Magdeburg</span>
+        <span class="city-status">Coming soon</span>
+      </div>
+
+      <!-- Erfurt -->
+      <div class="city-card disabled">
+        <img src="img-landing/erfurt.webp" alt="Kiel">
+        <span class="city-name">Erfurt</span>
+        <span class="city-status">Coming soon</span>
+      </div>
+   
+      <!-- Stadt -->
       <div class="city-card disabled">
         <img src="img-landing/kiel.webp" alt="Kiel">
         <span class="city-name">Kiel</span>
         <span class="city-status">Coming soon</span>
-      </div>
+      </div>      
 
     </section>
 
-    <footer class="landing-footer">
-      <p>Ein Tool für Gastronomie. Kein Login. Keine Registrierung.</p>
+    <footer class="app-footer">
+      <a href="/impressum.html">Impressum</a>
+      <span class="footer-sep">·</span>
+
+      <span class="footer-love">
+        Built with ❤️ in LE
+      </span>
+
+      <span class="footer-sep">·</span>
+      <a href="/datenschutz.html">Datenschutz</a>
     </footer>
+
+    <div class="footer-contact">
+      Weitere Informationen: 
+      <a href="mailto:city@gastroradar.info">city@gastroradar.info</a>
+    </div>    
 
   </main>
 

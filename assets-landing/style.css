@@ -6,9 +6,14 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  /*background: radial-gradient(circle at top, #0f2a3d, #050b10);*/
-  background: #ffffff;
-  color: #1a2430;
+  background:
+    radial-gradient(
+      1200px 500px at 50% -200px,
+      #3a4f63 0%,
+      #1f2e3a 40%,
+      #0f1720 100%
+    );
+  color: #e5eaf0;
   min-height: 100vh;
 }
 
@@ -24,13 +29,19 @@ body {
 }
 
 .logo {
-  max-width: 180px;
-  margin-bottom: 12px;
+  max-width: 300px;
 }
 
 .claim {
   font-size: 0.95rem;
-  opacity: 0.85;
+  color: #cfd8e3;
+  opacity: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.claim strong {
+  font-weight: 600;
+  color: #346c92;
 }
 
 .logo {
@@ -92,20 +103,33 @@ body {
 }
 
 /* Disabled */
-.city-card.disabled {
-  opacity: 0.45;
-  filter: grayscale(1);
-  cursor: not-allowed;
-}
-
 .city-card.disabled img {
-  opacity: 0.5;
+  opacity: 0.4;
+  filter: grayscale(0.4);
+  cursor: not-allowed;  
 }
 
 .city-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+}
+
+.city-card {
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.city-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Nur NICHT aktive Karten abdunkeln */
+.city-card:not(.active) img {
+  opacity: 0.4;
 }
 
 /* Footer */
@@ -116,9 +140,146 @@ body {
   opacity: 0.6;
 }
 
+/* ===============================
+   LAYOUT BASIS – STICKY FOOTER
+================================ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hauptinhalt darf wachsen */
+main,
+.calendar {
+  flex: 1;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.app-footer {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.app-footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-love {
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.02em;
+}
+
+.footer-sep {
+  opacity: 0.4;
+}
+
+.city-card {
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.08),
+    0 1px 2px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.city-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.12),
+    0 4px 8px rgba(0,0,0,0.06);
+}
+
+.city-card.active {
+  box-shadow:
+    0 0 0 2px #346c92,
+    0 8px 24px rgba(52,108,146,0.35);
+  animation: glow 4s ease-in-out infinite;
+}
+
+.city-badge {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  z-index: 10;
+
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(50, 104, 141, 0.8);
+  color: #fff;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  box-shadow: 0 6px 18px rgba(50,104,141,0.45);
+
+  top: auto;
+  bottom: 56px; /* city-name ist bei bottom: 36px */
+}
+
+.city-card.active .city-badge {
+  animation: pulseBadge 3.5s ease-in-out infinite;
+}
+
+.footer-contact {
+  margin-top: 10px;
+  padding-bottom: 14px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(229,234,240,0.6);
+}
+
+.footer-contact a {
+  color: rgba(229,234,240,0.8);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+@keyframes pulseBadge {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
 /* Glow animation */
 @keyframes glow {
-  0%   { box-shadow: 0 0 0 2px #346c92, 0 0 16px rgba(52,108,146,0.4); }
-  50%  { box-shadow: 0 0 0 2px #5fa0c8, 0 0 28px rgba(95,160,200,0.8); }
-  100% { box-shadow: 0 0 0 2px #346c92, 0 0 16px rgba(52,108,146,0.4); }
+  0%   { box-shadow: 0 0 0 2px #346c92, 0 8px 20px rgba(52,108,146,0.25); }
+  50%  { box-shadow: 0 0 0 2px #5fa0c8, 0 12px 28px rgba(95,160,200,0.45); }
+  100% { box-shadow: 0 0 0 2px #346c92, 0 8px 20px rgba(52,108,146,0.25); }
 }

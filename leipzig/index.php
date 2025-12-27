@@ -188,7 +188,6 @@ $manyEvents = $eventsThisWeek >= 4;
 </head>
 
 <body>
-
 <header class="app-header">
 
   <!-- LOGO / APP NAME -->
@@ -354,6 +353,18 @@ endwhile;
 ?>
 
 </main>
+
+<footer class="app-footer">
+  <a href="/impressum.html">Impressum</a>
+  <span class="footer-sep">·</span>
+
+  <span class="footer-love">
+    Built with ❤️ in LE
+  </span>
+
+  <span class="footer-sep">·</span>
+  <a href="/datenschutz.html">Datenschutz</a>
+</footer>
 
 <script>
   window.GASTRO_OVERLAY_EVERY = 5; // später aus config/app.json
