@@ -1,6 +1,4 @@
 <?php
-require __DIR__ . '/core/auth.php';
-
 define('APP_BASE_PATH', '/');
 
 $config = [];
@@ -254,7 +252,7 @@ $manyEvents = $eventsThisWeek >= 4;
 
 </header>
 
-<?php include __DIR__ . '/partials/adslot.php'; ?>
+<?php //include __DIR__ . '/partials/adslot.php'; ?>
 
 <main class="calendar">
 
@@ -362,6 +360,6 @@ endwhile;
 </script>
 <script src="/assets/app.js"></script>
 
-<?php include __DIR__ . '/partials/ad_overlay.php'; ?>
+<?php //include __DIR__ . '/partials/ad_overlay.php'; ?>
 </body>
 </html>
